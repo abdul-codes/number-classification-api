@@ -16,7 +16,7 @@ app.get("/api/classify-number", asyncHandler(async (req: Request, res: Response)
     if (!number) {
          res.status(400).json({
              error: true,
-            number: "null"
+            number: ""
         })
         return 
     }

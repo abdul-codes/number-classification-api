@@ -59,11 +59,11 @@ function getProperties(num: number) {
 }
 
 function isArmstrong(num: number): boolean {
-    // for only positive integers
-    if (num < 0) return false;
+    // 
+    const absoluteNum = Math.abs(num);
 
     // Convert number to array of digit strings
-    const digits = String(num).split('');
+    const digits = String(absoluteNum).split('');
     
     // Calculate sum of each digit raised to power of number of digits
     const sum = digits.reduce((acc, digit) => acc + Math.pow(Number(digit), digits.length), 0);
