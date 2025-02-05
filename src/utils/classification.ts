@@ -69,7 +69,7 @@ function isArmstrong(num: number): boolean {
     const sum = digits.reduce((acc, digit) => acc + Math.pow(Number(digit), digits.length), 0);
     
     // Number is Armstrong if sum equals original number
-    return sum === num;
+    return sum === absoluteNum;
 }
 
 
@@ -83,10 +83,4 @@ function getDigitalSum(num: number): number {
     // Sum all digits
     return digits.reduce((sum, digit) => sum + Number(digit), 0);
 
-}
-
-function getDigitSum(num: number): number {
-    return String(num)
-        .split('')
-        .reduce((acc, digit) => acc + Number(digit), 0);
 }
