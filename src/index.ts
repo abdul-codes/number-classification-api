@@ -13,13 +13,20 @@ app.use(cors())
 app.get("/api/classify-number", asyncHandler(async (req: Request, res: Response) => {
     const {number } = req.query
     // Validate the number
-    if (!number || isNaN(Number(number))) {
+    if (!number) {
          res.status(400).json({
-            number: number ,
-            error: true
+             error: true,
+            number: "null"
         })
         return 
     }
+    if (isNaN(Number(number))) {
+        res.status(400).json({
+            error: true,
+           number: number
+       })
+       return 
+   }
     const num = parseInt(number as string, 10)
 
     // Classifying the number

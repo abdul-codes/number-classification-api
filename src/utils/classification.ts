@@ -59,6 +59,9 @@ function getProperties(num: number) {
 }
 
 function isArmstrong(num: number): boolean {
+    // for only positive integers
+    if (num < 0) return false;
+
     // Convert number to array of digit strings
     const digits = String(num).split('');
     
@@ -69,11 +72,21 @@ function isArmstrong(num: number): boolean {
     return sum === num;
 }
 
+
 function getDigitalSum(num: number): number {
+     // Handle negative numbers by taking their absolute value
+     const absoluteNum = Math.abs(num);
+
     // Convert number to string to process each digit
-    const digits = String(num).split('');
+    const digits = String(absoluteNum).split('');
     
     // Sum all digits
     return digits.reduce((sum, digit) => sum + Number(digit), 0);
 
+}
+
+function getDigitSum(num: number): number {
+    return String(num)
+        .split('')
+        .reduce((acc, digit) => acc + Number(digit), 0);
 }
