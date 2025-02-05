@@ -28,15 +28,6 @@ app.get("/api/classify-number", asyncHandler(async (req: Request, res: Response)
     // Getting a Fun fact
     const funFact =  await getFunFact(num)
     
-
-    // const response = {
-    //     "number": num,
-    //     "is_prime": classification.isPrime,
-    //     "is_perfect": classification.isPerfect,
-    //     "properties": classification.properties,
-    //     "digit_sum": classification.digitSum,
-    //     "fun_fact": funFact
-    // }
     const response = {
         number: num,
         is_prime: classification.isPrime, // No quotes needed

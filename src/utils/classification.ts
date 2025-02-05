@@ -48,12 +48,12 @@ function getProperties(num: number) {
     const properties: string[] = []
 
     // Check if number is Armstrong (sum of its digits raised to power equals itself)
-    if (isArmstrong(num)) properties.push('Armstrong')
+    if (isArmstrong(num)) properties.push('armstrong')
 
     // Check if number is even 
-    if (num % 2 === 0) properties.push('Even')
+    if (num % 2 === 0) properties.push('even')
      // Check if number is  odd 
-    if (num % 2 !== 0) properties.push('Odd')
+    if (num % 2 !== 0) properties.push('odd')
 
     return properties
 }
