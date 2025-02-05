@@ -15,7 +15,7 @@ app.get("/api/classify-number", asyncHandler(async (req: Request, res: Response)
     // Validate the number
     if (!number || isNaN(Number(number))) {
          res.status(400).json({
-            number: "alphabet" ,
+            number: number ,
             error: true
         })
         return 
