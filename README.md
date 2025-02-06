@@ -1,4 +1,4 @@
-# stage1
+# Number Classification API
 
 Number Classification API
 This is an API built with Node.js, Express, and TypeScript that classifies a given number and provides some properties about it, such as whether it's a prime number, a perfect number, or an Armstrong number. It also includes a fun fact about the number.
